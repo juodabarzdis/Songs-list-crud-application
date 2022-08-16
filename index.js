@@ -5,7 +5,7 @@ import mysql from "mysql2/promise";
 import multer from "multer";
 import session from "express-session";
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 app.use(
