@@ -1,0 +1,230 @@
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+h2,
+h3 {
+  margin: 30px 0;
+}
+.logo {
+  margin: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-items li {
+  margin: 20px;
+  width: 100px;
+  text-align: center;
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-items a:hover {
+  background-color: #45a049c9;
+  border-radius: 20px;
+
+  color: white;
+  padding: 6px 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+  background-image: url(./images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app-wrapper {
+  display: flex;
+  margin: auto;
+}
+
+.app {
+  width: 1080px;
+  margin: auto;
+}
+
+input[type="text"] {
+  width: 200px;
+  padding: 6px 12px;
+  margin: 8px 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
+}
+.submit {
+  background-color: #45a049;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-top: 30px;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.submit:hover {
+  background-color: #45a049c9;
+  cursor: pointer;
+}
+
+.submit:active {
+  background-color: #45a049;
+  box-shadow: 0 1px #666;
+  transform: translateY(1px);
+}
+
+.table {
+  border-collapse: collapse;
+  vertical-align: center;
+  width: 1080;
+}
+
+.playlist-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+td,
+th {
+  padding: 8px;
+  color: white;
+  border: none;
+  width: auto;
+}
+
+tr:hover {
+  background-color: #242424;
+  cursor: default;
+  transition: 50ms;
+}
+
+th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+  background-color: #242424;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+  height: 90vh;
+  background-color: #45a049;
+}
+
+.btn,
+.delete-btn {
+  transition: 50ms;
+  text-decoration: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.delete-btn:hover {
+  background-color: tomato;
+  border-radius: 20px;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+  border-radius: 20px;
+}
+.btn:active {
+  color: white;
+}
+
+.footer {
+  height: 200px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.edit-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 720px;
+  height: 500px;
+  background-color: black;
+}
+
+.message {
+  padding: 20px 0;
+  width: 1080px;
+  background-color: #45a049;
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer-banner {
+  width: 100%;
+  height: 250px;
+  background-image: url(./images/premium.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+footer {
+  margin-bottom: 100px;
+}
+
+.playlist {
+  background-color: #242424;
+  height: 100%;
+  align-items: unset;
+}
+
+.playlist .container {
+  background-color: #1a1a1a;
+  padding: 50px;
+}
+
+.addSong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.songs-wrapper {
+  height: 100%;
+}
+
+.songs-container {
+  background-color: #1a1a1a;
+  padding: 30px;
+}

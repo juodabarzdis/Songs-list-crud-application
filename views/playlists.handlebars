@@ -1,0 +1,55 @@
+<div class="logo">
+  <a href="/"><img width="150px" src="/images/Spotify_Logo.png" alt="" /></a>
+</div>
+<div class="wrapper playlist">
+
+  <div class="container">
+    <h2>Add new playlist</h2>
+    <div>
+      <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="playlist_name" placeholder="Playlist name" />
+        <input type="file" name="image" placeholder="image" />
+        <button class="submit" type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <h2>Playlists</h2>
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Playlist</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each playlists}}
+              <tr>
+                <td>{{id}}</td>
+                <td>
+                  <img class="playlist-image" src="/views/images/{{image}}" />
+                </td>
+                <td>{{playlist_name}}</td>
+                <td><a
+                    class="btn delete-btn"
+                    href="/delete/playlists/{{id}}"
+                  >delete</a></td>
+                <td><a
+                    class="btn edit-btn"
+                    href="/editPlaylist/{{id}}"
+                  >edit</a></td>
+
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <a class="submit" href="./">Back</a>
+    </div>
+  </div>
+</div>

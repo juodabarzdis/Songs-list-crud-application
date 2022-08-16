@@ -1,0 +1,26 @@
+<div class="wrapper">
+    
+  <div class="edit-form-wrapper">
+    <form method="POST" enctype="multipart/form-data">
+      <div>
+        <h3>Edit playlist "{{playlist_name}}"</h3>
+      </div>
+      <div>
+        <label for="playlist_name">Playlist name</label>
+        <input type="text" name="playlist_name" value="{{playlist_name}}" />
+      </div>
+      <div>
+        <label for="image">Image</label>
+        <input type="file" name="image" />
+      </div>
+      <div>
+       
+      <button
+        style="margin-top: 20px"
+        class="submit"
+        type="submit"
+      >Submit changes</button>
+       <a href="/" class="submit" style="margin-top: 20px">Back</a>
+    </form>
+  </div>
+</div>

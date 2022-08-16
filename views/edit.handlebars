@@ -1,0 +1,27 @@
+<section class="edit">
+
+  <div class="wrapper">
+    <div class="edit-form-wrapper">
+      <form method="POST">
+        <div>
+          <h3>Edit song "{{song_Name}}" by {{artist_name}}</h3>
+        </div>
+        <div>
+          <label for="song_Name">Artist name</label>
+          <input type="text" name="song_Name" value="{{artist_name}}" />
+        </div>
+        <div>
+          <label for="song_Name">Song name</label>
+          <input type="text" name="song_Name" value="{{song_Name}}" />
+        </div>
+        <div>
+          <label for="song_Album">Album</label>
+          <input type="text" name="song_Album" value="{{song_Album}}" />
+        </div>
+        <button style="margin-top: 20px" class="submit" type="submit">Submit
+          changes</button>
+        <a href="./" class="submit" style="margin-top: 20px">Back</a>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,101 @@
+<div class="app-wrapper">
+
+  <div class="app">
+    <div>
+      {{#if message}}
+        <div class="message">{{message}}</div>
+      {{/if}}
+    </div>
+
+    <header>
+      <div class="logo">
+        <a href="/"><img
+            width="200px"
+            src="/images/Spotify_Logo.png"
+            alt=""
+          /></a>
+      </div>
+      {{!-- <div>
+        <p>logged in as {{first_name}}</p>
+      </div> --}}
+      <div class="menu">
+        <ul class="menu-items">
+          <li><a href="/register">Sign up</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <div class="banner"> </div>
+    </section>
+    <div class="header">
+
+    </div>
+
+    <!-- PLAYLISTS -->
+
+    <div>
+      <a href="./playlists"><h2>My playlists</h2></a>
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Playlist</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each playlists}}
+              <tr>
+                <td>{{id}}</td>
+                <td>
+                  <img class="playlist-image" src="/views/images/{{image}}" />
+                </td>
+                <td>{{playlist_name}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PLAYLISTS -->
+
+    <div>
+      <div>
+        <a href="/songs"><h2>Songs</h2></a>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Artist</th>
+            <th>Song</th>
+            <th>Album</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {{#each songs}}
+            <tr>
+              <td>{{id}}</td>
+              <td>{{artist_name}}</td>
+              <td>{{song_Name}}</td>
+              <td>{{song_Album}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="footer-banner"></div>
+
+        <div class="end">
+          <p> &copy; Kodavimo fabrikėlis </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

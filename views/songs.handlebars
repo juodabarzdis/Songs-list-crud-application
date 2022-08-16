@@ -1,0 +1,61 @@
+<div class="logo">
+  <a href="/"><img width="150px" src="/images/Spotify_Logo.png" alt="" /></a>
+</div>
+<div class="wrapper songs-wrapper">
+  <div class="songs-container">
+    <div class="addSong">
+      <div
+        style="margin-right: 40px;
+        font-weight: bold"
+      ><p>Add a new song</p></div>
+      <form method="POST">
+
+        <input type="text" name="artist_name" placeholder="Artist" />
+        <input type="text" name="song_Name" placeholder="Song" />
+        <input type="text" name="song_Album" placeholder="Album" />
+        <select name="user_id" id="">
+          {{#each playlists}}
+            <option name="id" value="{{id}}">{{playlist_name}}</option>
+          {{/each}}
+        </select>
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <div>
+        <a href="/songs"><h2>Top songs</h2></a>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Artist</th>
+            <th>Song</th>
+            <th>Album</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each songs}}
+            <tr>
+              <td>{{id}}</td>
+              <td>{{artist_name}}</td>
+              <td>{{song_Name}}</td>
+              <td>{{song_Album}}</td>
+              <td><a
+                  class="btn delete-btn"
+                  href="/delete/{{id}}"
+                >delete</a></td>
+              <td><a class="btn edit-btn" href="/edit/{{id}}">edit</a></td>
+
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <a class="submit" href="/">Back</a>
+    </div>
+  </div>
+</div>
