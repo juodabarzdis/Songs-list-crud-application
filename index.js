@@ -151,11 +151,12 @@ app.get("/playlists", auth, async (req, res) => {
 app.post("/playlists", upload.single("image"), async (req, res) => {
   const { playlist_name } = req.body;
   const user = req.session.user;
+  const image = req.file ? req.file.filename : "";
   await database.query(
     "INSERT INTO playlists (playlist_name, image, user_id) VALUES (?, ?, ?)",
-    [playlist_name, req.file.filename, user]
+    [playlist_name, image, user]
   );
-  res.redirect("playlists", playlist_name, req.file.filename);
+  res.redirect("/playlists");
 });
 
 app.get("/delete/playlists/:id", auth, async (req, res) => {
@@ -182,13 +183,13 @@ app.post(
   async (req, res) => {
     const id = req.params.id;
     const { playlist_name } = req.body;
-    const image = req.file.filename;
+    const image = req.file ? req.file.filename : "";
     await database.query(
       "UPDATE playlists SET playlist_name = ?, image = ? WHERE id = ?",
       [playlist_name, image, id]
     );
-    console.log(image);
-    res.redirect("/playlists", playlist_name, image);
+
+    res.redirect("/playlists");
   }
 );
 // REGISTER
